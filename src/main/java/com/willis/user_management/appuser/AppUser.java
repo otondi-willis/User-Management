@@ -19,7 +19,10 @@ public class AppUser implements UserDetails {
     private Boolean isEnabled;
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
+        SimpleGrantedAuthority authority =
+                new SimpleGrantedAuthority(appUserRole.name());
 
+        return Collections.singletonList(authority);
     }
 
     @Override
