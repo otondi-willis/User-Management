@@ -1,5 +1,6 @@
 package com.willis.user_management.appuser;
 
+import jakarta.persistence.Entity;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
@@ -11,6 +12,7 @@ import java.util.Collections;
 
 @Data
 @NoArgsConstructor
+@Entity
 public class AppUser implements UserDetails {
 
     private Long id;
